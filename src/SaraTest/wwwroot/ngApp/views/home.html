@@ -1,0 +1,26 @@
+<!--<table class="table table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="restaurant in controller.restaurants">
+            <td>{{restaurant.name}}</td>
+            <td>{{restaurant.phoneNumber | tel}}</td>
+        </tr>
+    </tbody>
+</table>-->
+<md-card ng-repeat="restaurant in controller.restaurants">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{restaurant.name}}</span>
+            <span class="md-subhead">{{restaurant.phoneNumber | tel}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+            <div class="md-media-lg card-media">
+                <img src="{{restaurant.imageUrl}}" />
+            </div>
+        </md-card-title-media>
+    </md-card-title>
